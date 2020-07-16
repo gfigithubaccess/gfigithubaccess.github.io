@@ -194,18 +194,12 @@ function sanitize(text) {
 * Das geschieht durch verstecken des Frage-Areas und sichtbar machen des Antwort-Areas.
 * Zusätzlich wird 
 */
-function anzeigenVerschluesseltesErgebnis(verschluesselterText) {
+function anzeigenVerschluesseltesErgebnis(ausgabeText) {
 
-    let ausgabeText = "---" + text + "---";
-    
-    alert(ausgabeText);
+    document.getElementById("question_div").style.display = "none";  // verstecke das Frage-Area
 
-    /*
-    document.getElementById("questionArea").style.display = "none";  // verstecke das Frage-Area
-
-    document.getElementById("output").innerHTML = ausgabeText;       // Zeige den Antworttext im Antwort-Area an
-    document.getElementById("resultArea").style.display = "block";   // Zeige das Antwort-Area an
-    */
+    document.getElementById("result_area").value = ausgabeText;       // Zeige den Antworttext im Antwort-Area an
+    document.getElementById("result_div").style.display = "block";   // Zeige das Antwort-Area an
 }
 
 /** Kopiert den param textToCopy in die Zwischenablage.
