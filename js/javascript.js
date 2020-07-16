@@ -212,16 +212,10 @@ function anzeigenVerschluesseltesErgebnis(verschluesselterText) {
 * Erzeugt eine temporäres Textelement, um den zu kopierenden Text in die Zwischenablage zu befördern.
 */
 function kopiereStringInsClipboard(textToCopy) {
-    var textElement = document.createElement('textarea');
+    var textElement = document.getElementById("result_area");
     textElement.value = textToCopy;
-    textElement.setAttribute('readonly', '');
-    textElement.style.position = 'absolute';
-    textElement.style.left = '-9999px';
-
-    document.body.appendChild(textElement);
     textElement.select();
     document.execCommand('copy');
-    document.body.removeChild(textElement);
 }
 
 // Holt den Value des ausgewählten Radiobuttons aus der Gruppe mit dem jeweiligen Namen
