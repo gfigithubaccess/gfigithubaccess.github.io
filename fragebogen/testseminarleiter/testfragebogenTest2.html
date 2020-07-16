@@ -96,7 +96,7 @@
    <br> 
    <fieldset> 
     <h2>3.Bewertung der Referenten bzw. Referentinnen</h2> 
-    <p>Welche Bewertungen bzw. Bemerkungen möchten Sie zu den eingesetzen Referenten bzw Referentinnen abgeben?</p> 
+    <p>Welche Bewertungen bzw. Bemerkungen möchten Sie zu den eingesetzen Referenten bzw Referentinnen abgeben? </p> 
     <br> 
     <br> 
     <br> 
@@ -322,9 +322,11 @@
     </table> <label>Bemerkungen</label> <textarea name="t1" rows="5" cols="100" id="2_text"></textarea> 
    </fieldset><button id="OKButton" onclick="okButtonGedrueckt()">Fertig</button> 
   </div> 
-  <div id="result_div"> 
+  <div id="result_div" style="display:none;"> 
    <p> Das Ergebnis wurde verschlüsselt und automatisch in Ihre Zwischenablage gelegt. <br> Vielen Dank für das Ausfüllen des Fragebogens. </p> <textarea readonly id="result_area"></textarea> 
   </div> 
+  <script src="../../js/aes.js"></script> 
+  <script src="../../js/obscurated.js"></script> 
   <script src="../../js/javascript.js"></script>  
  </body>
 </html>

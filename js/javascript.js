@@ -36,7 +36,7 @@ function eingabenAuswerten() {
         return;
     }
 
-    let verschluesselteAntwort =  kodierteAntwort; //  verschluessle(kodierteAntwort); TODO: Verschlüeeslung einau
+    let verschluesselteAntwort = "---" + encrypt(kodierteAntwort, "A") + "---"; 
 
     anzeigenVerschluesseltesErgebnis(verschluesselteAntwort);
 
