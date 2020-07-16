@@ -194,34 +194,22 @@ function sanitize(text) {
 * Das geschieht durch verstecken des Frage-Areas und sichtbar machen des Antwort-Areas.
 * Zusätzlich wird 
 */
-function anzeigenVerschluesseltesErgebnis(verschluesselterText) {
+function anzeigenVerschluesseltesErgebnis(ausgabeText) {
 
-    let ausgabeText = "---" + text + "---";
-    
-    alert(ausgabeText);
+    document.getElementById("question_div").style.display = "none";  // verstecke das Frage-Area
 
-    /*
-    document.getElementById("questionArea").style.display = "none";  // verstecke das Frage-Area
-
-    document.getElementById("output").innerHTML = ausgabeText;       // Zeige den Antworttext im Antwort-Area an
-    document.getElementById("resultArea").style.display = "block";   // Zeige das Antwort-Area an
-    */
+    document.getElementById("result_area").value = ausgabeText;       // Zeige den Antworttext im Antwort-Area an
+    document.getElementById("result_div").style.display = "block";   // Zeige das Antwort-Area an
 }
 
 /** Kopiert den param textToCopy in die Zwischenablage.
 * Erzeugt eine temporäres Textelement, um den zu kopierenden Text in die Zwischenablage zu befördern.
 */
 function kopiereStringInsClipboard(textToCopy) {
-    var textElement = document.createElement('textarea');
+    var textElement = document.getElementById("result_area");
     textElement.value = textToCopy;
-    textElement.setAttribute('readonly', '');
-    textElement.style.position = 'absolute';
-    textElement.style.left = '-9999px';
-
-    document.body.appendChild(textElement);
     textElement.select();
     document.execCommand('copy');
-    document.body.removeChild(textElement);
 }
 
 // Holt den Value des ausgewählten Radiobuttons aus der Gruppe mit dem jeweiligen Namen
