@@ -15,8 +15,8 @@
     <!--interne styles aus dem Azubi-Umfrage html-->
     <style>
         body {
-          color:#555;
-
+            background-color: #f7f7f7;
+            color: #555;
             font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif;
         }
 
@@ -46,34 +46,33 @@
 
 
         .fieldsetBox {
-border-color:lightgrey;
+            border-color: f7f7f;
             display: block;
-            margin-top: 10px;
-            margin-left: 20%;
-            margin-right: 20%;
-            padding: 10px;
-
-
+            margin-top: 20px;
+            margin-left: 25%;
+            margin-right: 25%;
+            padding: 2x 10px 10px 10px;
+            border-style: dotted;
+            border-top-width: 100%;
+            background-color: white;
         }
 
-
-
         .headerErsteEbene {
-            
-            
+
             font-weight: bold;
         }
 
-      
+
 
         table {
             width: 100%;
         }
 
-        
+
         /*Überschriftenzeile für Radiobuttongroup richtig positionieren*/
         .thKategorie {
             text-align: start;
+            padding-bottom: 6;
         }
 
         .thWertung {
@@ -81,7 +80,9 @@ border-color:lightgrey;
         }
 
         .labelTextfeld {
-            text-decoration: underline
+            display: block;
+            text-decoration: underline;
+            margin-top: 50;
         }
 
         textarea {
@@ -103,10 +104,6 @@ border-color:lightgrey;
             margin-left: auto;
             margin-right: auto;
             display: block;
-
-
-
-
         }
 
 
@@ -119,7 +116,8 @@ border-color:lightgrey;
 </head>
 
 <body>
-    <fieldset class="header fieldsetBox" <!--xxxxIMG-->
+    <fieldset class="header fieldsetBox">
+        <!--xxxxIMG-->
         <img src="https://www.die-gfi.de/templates/gfi2017/images/logo.svg" alt="die-gfi.de logo" width="81"
             height="67">
 
@@ -160,15 +158,16 @@ border-color:lightgrey;
 
         </p>
     </fieldset>
-    <br>
+    <!--xxxx remove 1x <br>-->
 
     <fieldset class="fieldsetBox" id="massnahme_fs0">
 
-        <br>
+        <!--xxxx remove 1x <br>-->
+
         <table style="width: 100%;">
-            <thead>
+            <thead class="headerErsteEbene">
                 <tr>
-                    <th class="thKategorie headerErsteEbene" name="1_name">1. Maßnahmenverlauf: </th>
+                    <th class="thKategorie " name="1_name">1. Maßnahmenverlauf: </th>
                     <th class="thWertung">-2</th>
                     <th class="thWertung">-1</th>
                     <th class="thWertung">0</th>
@@ -221,21 +220,20 @@ border-color:lightgrey;
                 </tr>
             </tbody>
         </table>
-        <br>
-        <br>
-        <label class="labelTextfeld" >Was Sie uns noch mitteilen möchten</label>
+
+        <label class="labelTextfeld">Was Sie uns noch mitteilen möchten</label>
         <textarea id="a_t0" rows="5" cols="100"></textarea>
     </fieldset>
-    <br>
-    <br>
+    <!--xxxx remove 2x <br>-->
 
     <fieldset class="fieldsetBox" id="massnahme_fs1">
 
-        <br>
+        <!--xxxx remove 1x <br>-->
+
         <table>
-            <thead>
+            <thead class="headerErsteEbene">
                 <tr>
-                    <th class="thKategorie headerErsteEbene" name="1_name">2. Maßnahmebetreung:</th>
+                    <th class="thKategorie " name="1_name">2. Maßnahmebetreung:</th>
                     <th class="thWertung">-2</th>
                     <th class="thWertung">-1</th>
                     <th class="thWertung">0</th>
@@ -268,33 +266,31 @@ border-color:lightgrey;
 
             </tbody>
         </table>
-        <br>
-        <br>
+        <!--xxxx remove 2 x <br>-->
         <label class="labelTextfeld">Was Sie uns noch mitteilen möchten</label>
         <textarea id="b_t0" rows="5" cols="100"></textarea>
     </fieldset>
 
-    <br>
-    <br>
+    <!--xxxx remove 2x <br>-->
     <fieldset class="fieldsetBox">
         <!--h2 zu p um Größe anpassen zu können-->
         <p class="headerErsteEbene">3.Bewertung der Referenten bzw. Referentinnen</p>
         <p>Welche Bewertungen bzw. Bemerkungen möchten Sie zu den eingesetzen Referenten bzw Referentinnen abgeben?</p>
-        <br>
-        <br>
-        <br>
-        <br>
+        <!--xxxx remove 4 x <br>-->
         <label class="labelTextfeld">Bemerkungen</label>
         <textarea id="c_t0" rows="5" cols="100"></textarea>
     </fieldset>
 
+    <br>
+    <br>
     <fieldset class="fieldsetBox" id="referent">
         <!--h2 zu p um Größe anpassen zu können-->
         <p class="headerErsteEbene">Bewertung der Referentin / des Referenten </p>
-        <br>
+        <!--xxxx remove 1x <br>-->
+
         <table>
-            <thead>
-                <th class="thKategorie headerErsteEbene" id="name">>Name: Max Müller</th>
+            <thead class="headerErsteEbene">
+                <th class="thKategorie " id="name">Name: Max Müller</th>
                 <th class="thWertung">-2</th>
                 <th class="thWertung">-1</th>
                 <th class="thWertung">0</th>
