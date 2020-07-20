@@ -2,9 +2,8 @@
 body {
     background-color: #f7f7f7;
     color: #555;
-    font-family: "Arial", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif;
 }
-
 
 img {
     display: block;
@@ -13,13 +12,9 @@ img {
 }
 
 
-
-.header {}
-
-.header h2 {
-
+h1{
     background-color: #f8b322;
-
+    text-align: center;
 }
 
 .intro {
@@ -27,8 +22,6 @@ img {
     text-align: center;
     font-weight: bold;
 }
-
-
 
 .fieldsetBox {
     border-color: f7f7f;
@@ -42,29 +35,22 @@ img {
     background-color: white;
 }
 
-.headerErsteEbene {
-
+h2 {
+    margin-top: 5px; 
     font-weight: bold;
 }
-
-
 
 table {
     width: 100%;
 }
 
 
-/*Überschriftenzeile für Radiobuttongroup richtig positionieren*/
-.thKategorie {
-    text-align: start;
-    padding-bottom: 6;
-}
 
 .thWertung {
     text-align: center;
 }
 
-.labelTextfeld {
+.labelTextarea {
     display: block;
     text-decoration: underline;
     margin-top: 50;
@@ -90,7 +76,6 @@ button {
     margin-right: auto;
     display: block;
 }
-
 
 .warnung {
     background-color: #FF4E5D;
