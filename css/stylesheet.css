@@ -12,8 +12,9 @@ img {
 }
 
 
-.header h2 {
+h1{
     background-color: #f8b322;
+    text-align: center;
 }
 
 .intro {
@@ -34,7 +35,8 @@ img {
     background-color: white;
 }
 
-.headerErsteEbene {
+h2 {
+    margin-top: 5px; 
     font-weight: bold;
 }
 
@@ -42,11 +44,7 @@ table {
     width: 100%;
 }
 
-/*Überschriftenzeile für Radiobuttongroup richtig positionieren*/
-.thKategorie {
-    text-align: start;
-    padding-bottom: 6;
-}
+
 
 .thWertung {
     text-align: center;
