@@ -3,6 +3,7 @@ body {
     background-color: #f7f7f7;
     color: #555;
     font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif;
+    width: 95%;
 }
 
 img {
@@ -58,11 +59,13 @@ input{
 .labelTextarea {
     display: block;
     text-decoration: underline;
-    margin-top: 50;
 }
 
 textarea {
     width: 100%;
+    border-collapse: collapse;
+    font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif;
+    margin-top: 3px;
 }
 
 button {
