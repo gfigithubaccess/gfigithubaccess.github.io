@@ -11,10 +11,14 @@ img {
     margin-right: auto;
 }
 
-
 h1{
     background-color: #f8b322;
     text-align: center;
+}
+
+h2 {
+    margin-top: 5px; 
+    font-weight: bold;
 }
 
 .intro {
@@ -27,25 +31,21 @@ h1{
     border-color: f7f7f;
     display: block;
     margin-top: 20px;
-    margin-left: 25%;
-    margin-right: 25%;
     padding: 2x 10px 10px 10px;
     border-style: dotted;
     border-top-width: 100%;
     background-color: white;
-}
-
-h2 {
-    margin-top: 5px; 
-    font-weight: bold;
+    width: 100%;
 }
 
 table {
     width: 100%;
 }
-
-
-
+input{
+    display:block; 
+    margin-left: auto;
+    margin-right: auto;
+}
 .thWertung {
     text-align: center;
 }
@@ -72,9 +72,7 @@ button {
     border: 1px solid #ffaa22 !important;
     margin-top: 15px;
     margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+   width:100%; 
 }
 
 .warnung {
