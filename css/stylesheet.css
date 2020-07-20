@@ -29,11 +29,9 @@ h2 {
 
 .fieldsetBox {
     border-color: f7f7f;
-    display: block;
     margin-top: 20px;
     padding: 2x 10px 10px 10px;
     border-style: dotted;
-    border-top-width: 100%;
     background-color: white;
     width: 100%;
 }
