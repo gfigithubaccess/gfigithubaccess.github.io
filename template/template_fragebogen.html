@@ -3,18 +3,18 @@
 
 <head>
     <title>Fragebogen</title>
-    <!--Todo: vor dem mergen Pfadangabe wieder mit "/"-->
-    <link rel="stylesheet" href="..\\..\\css\\stylesheet.css">
 
-    <!--links, um gfi-icon einzubinden Todo: braucht man die alle ? -->
-    <link rel="shortcut icon" type="image/x-icon" href="https://www.die-gfi.de/favicon.ico">
+
+    <link rel="stylesheet" href="../../css/stylesheet.css">
     <link rel="apple-touch-icon" sizes="180x180" href="https://www.die-gfi.de/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://www.die-gfi.de/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://www.die-gfi.de/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.die-gfi.de/favicon.ico">
+
 </head>
 
 <body>
-    <fieldset class="header fieldsetBox">
+     <fieldset class="fieldsetBox"class="header fieldsetBox">
         <!--xxxxIMG-->
         <img src="https://www.die-gfi.de/templates/gfi2017/images/logo.svg" alt="die-gfi.de logo" width="81"
             height="67">
@@ -29,10 +29,10 @@
     </fieldset>
     <!--xxxxremove two <br>-->
     <p class="intro">
-        Wir möchten Ihre persöhnliche Meinung wissen!
+        Wir möchten Ihre persönliche Meinung wissen!
     </p>
 
-    <fieldset class="fieldsetBox form-line form-html">
+     <fieldset class="fieldsetBox"class="fieldsetBox form-line form-html">
         <p style="text-align:left;">
             Maßnahme
             <span style="text-align:center;" id="statrtdatum">
@@ -56,259 +56,261 @@
 
         </p>
     </fieldset>
+
     <!--xxxx remove 1x <br>-->
+    <div id="question_div">
+         <fieldset class="fieldsetBox"class="fieldsetBox" id="massnahme_fs0">
 
-    <fieldset class="fieldsetBox" id="massnahme_fs0">
+            <!--xxxx remove 1x <br>-->
+            <h2 style="text-align: left;" name="1_name">1. Maßnahmenverlauf:</h2>
+            <!--xxxx remove 1x <br>-->
+            <table style="width: 100%;">
+                <thead class="headerErsteEbene">
+                    <tr>
+                        <th></th>
+                        <th class="thWertung">-2</th>
+                        <th class="thWertung">-1</th>
+                        <th class="thWertung">0</th>
+                        <th class="thWertung">1</th>
+                        <th class="thWertung">2</th>
+                    </tr>
+                </thead>
+                <tbody id="massnahme_tbody0">
+                    <tr>
+                        <td>
+                            1.1 Wie empfinden Sie die Organisation der Maßnahme
+                        </td>
 
-        <!--xxxx remove 1x <br>-->
+                        <td>
+                            <input type="radio" name="a_r0" value="0" />
+                        </td>
+                        <td>
+                            <input type="radio" name="a_r0" value="1" />
+                        </td>
+                        <td>
+                            <input type="radio" name="a_r0" value="2" />
+                        </td>
+                        <td>
+                            <input type="radio" name="a_r0" value="3" />
+                        </td>
+                        <td>
+                            <input type="radio" name="a_r0" value="4" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            1.2 Wie zufrieden sind Sie mit dem Maßnahmenverlauf ?
+                        </td>
 
-        <table style="width: 100%;">
-            <thead class="headerErsteEbene">
-                <tr>
-                    <th class="thKategorie " name="1_name">1. Maßnahmenverlauf: </th>
+                        <td>
+                            <input type="radio" name="a_r1" value="0" />
+                        </td>
+                        <td>
+                            <input type="radio" name="a_r1" value="1" />
+                        </td>
+                        <td>
+                            <input type="radio" name="a_r1" value="2" />
+                        </td>
+                        <td>
+                            <input type="radio" name="a_r1" value="3" />
+                        </td>
+                        <td>
+                            <input type="radio" name="a_r1" value="4" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!--xxxx remove 2x <br>-->
+            <label class="labelTextfeld" >Was Sie uns noch mitteilen möchten</label>
+            <textarea id="a_t0" rows="5" cols="100"></textarea>
+        </fieldset>
+       <!--xxxx remove 2x <br>-->
+
+          <fieldset class="fieldsetBox"class="fieldsetBox"id="massnahme_fs1">
+            <h2 style="text-align: left;" name="1_name">2. Maßnahmebetreung:</h2>
+             <!--xxxx remove 1x <br>-->
+            <table>
+                <th class="thWertung"ead>
+                    <tr>
+                        <th></th>
+                        <th class="thWertung">-2</th>
+                        <th class="thWertung">-1</th>
+                        <th class="thWertung">0</th>
+                        <th class="thWertung">1</th>
+                        <th class="thWertung">2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            2.1 Wie zufrieden sind Sie mit der Betreuung durch uns?
+                        </td>
+                        <td>
+                            <input type="radio" name="b_r0" value="0" />
+                        </td>
+                        <td>
+                            <input type="radio" name="b_r0" value="1" />
+                        </td>
+                        <td>
+                            <input type="radio" name="b_r0" value="2" />
+                        </td>
+                        <td>
+                            <input type="radio" name="b_r0" value="3" />
+                        </td>
+                        <td>
+                            <input type="radio" name="b_r0" value="4" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+                <!--xxxx remove 2x <br>-->
+            <label class="labelTextfeld" >Was Sie uns noch mitteilen möchten</label>
+            <textarea id="b_t0" rows="5" cols="100"></textarea>
+        </fieldset>
+
+       <!--xxxx remove 2x <br>-->
+        <fieldset class="fieldsetBox">
+            <h2>3.Bewertung der Referenten bzw. Referentinnen</h2>
+            <p>Welche Bewertungen bzw. Bemerkungen möchten Sie zu den eingesetzen Referenten bzw Referentinnen abgeben?
+            </p>
+               <!--xxxx remove 4x <br>-->
+            <label class="labelTextfeld" >Bemerkungen</label>
+            <textarea id="c_t0" rows="5" cols="100"></textarea>
+        </fieldset>
+
+         <fieldset class="fieldsetBox" id="referent">
+            <h2>Bewertung der Referentin / des Referenten </h2>
+              <!--xxxx remove 1x <br>-->
+            <table>
+                <thead>
+                    <th style="text-align: left;" id="name">Name: Max Müller</th>
                     <th class="thWertung">-2</th>
                     <th class="thWertung">-1</th>
                     <th class="thWertung">0</th>
                     <th class="thWertung">1</th>
                     <th class="thWertung">2</th>
-                </tr>
-            </thead>
-            <tbody id="massnahme_tbody0">
-                <tr>
-                    <td>
-                        1.1 Wie empfinden Sie die Organisation der Maßnahme
-                    </td>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            Wie war ihr / sein Unterricht vorbereitet?
+                        </td>
+                        <td>
+                            <input type="radio" name="r0" value="0" />
+                        </td>
+                        <td>
+                            <input type="radio" name="r0" value="1" />
+                        </td>
+                        <td>
+                            <input type="radio" name="r0" value="2" />
+                        </td>
+                        <td>
+                            <input type="radio" name="r0" value="3" />
+                        </td>
+                        <td>
+                            <input type="radio" name="r0" value="4" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Wie umfangreich war ihr / sein Fachwissen?
+                        </td>
+                        <td>
+                            <input type="radio" name="r1" value="0" />
+                        </td>
+                        <td>
+                            <input type="radio" name="r1" value="1" />
+                        </td>
+                        <td>
+                            <input type="radio" name="r1" value="2" />
+                        </td>
+                        <td>
+                            <input type="radio" name="r1" value="3" />
+                        </td>
+                        <td>
+                            <input type="radio" name="r1" value="4" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Wie ging sie / er auf spezielle thematische Probleme ein?
+                        </td>
+                        <td>
+                            <input type="radio" name="r2" value="0" />
+                        </td>
+                        <td>
+                            <input type="radio" name="r2" value="1" />
+                        </td>
+                        <td>
+                            <input type="radio" name="r2" value="2" />
+                        </td>
+                        <td>
+                            <input type="radio" name="r2" value="3" />
+                        </td>
+                        <td>
+                            <input type="radio" name="r2" value="4" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Wie verständlich sie / er die Inhalte vermitteln?
+                        </td>
+                        <td>
+                            <input type="radio" name="r3" value="0" />
+                        </td>
+                        <td>
+                            <input type="radio" name="r3" value="1" />
+                        </td>
+                        <td>
+                            <input type="radio" name="r3" value="2" />
+                        </td>
+                        <td>
+                            <input type="radio" name="r3" value="3" />
+                        </td>
+                        <td>
+                            <input type="radio" name="r3" value="4" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Wie sagte Ihnen ihr / sein Verhalten gegenüber den Seminarteilnehmern zu?
+                        </td>
+                        <td>
+                            <input type="radio" name="r4" value="0" />
+                        </td>
+                        <td>
+                            <input type="radio" name="r4" value="1" />
+                        </td>
+                        <td>
+                            <input type="radio" name="r4" value="2" />
+                        </td>
+                        <td>
+                            <input type="radio" name="r4" value="3" />
+                        </td>
+                        <td>
+                            <input type="radio" name="r4" value="4" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <label class="labelTextfeld">Bemerkungen</label>
+            <textarea name="t1" rows="5" cols="100"></textarea>
+        </fieldset>
 
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="a_r0" value="0" />
-                    </td>
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="a_r0" value="1" />
-                    </td>
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="a_r0" value="2" />
-                    </td>
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="a_r0" value="3" />
-                    </td>
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="a_r0" value="4" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        1.2 Wie zufrieden sind Sie mit dem Maßnahmenverlauf ?
-                    </td>
+        <button id="OKButton" onclick="okButtonGedrueckt()">Fertig</button>
+    </div>
 
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="a_r1" value="0" />
-                    </td>
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="a_r1" value="1" />
-                    </td>
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="a_r1" value="2" />
-                    </td>
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="a_r1" value="3" />
-                    </td>
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="a_r1" value="4" />
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+    <div id="result_div" style="display:none;">
+        <p>
+            Das Ergebnis wurde verschlüsselt und automatisch in Ihre Zwischenablage gelegt.
+            <br />
+            Vielen Dank für das Ausfüllen des Fragebogens.
+        </p>
+        <textarea readonly id="result_area"></textarea>
+    </div>
 
-        <label class="labelTextfeld">Was Sie uns noch mitteilen möchten</label>
-        <textarea id="a_t0" rows="5" cols="100"></textarea>
-    </fieldset>
-    <!--xxxx remove 2x <br>-->
-
-    <fieldset class="fieldsetBox" id="massnahme_fs1">
-
-        <!--xxxx remove 1x <br>-->
-
-        <table>
-            <thead class="headerErsteEbene">
-                <tr>
-                    <th class="thKategorie " name="1_name">2. Maßnahmebetreung:</th>
-                    <th class="thWertung">-2</th>
-                    <th class="thWertung">-1</th>
-                    <th class="thWertung">0</th>
-                    <th class="thWertung"> 1</th>
-                    <th class="thWertung">2</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        2.1 Wie zufrieden sind Sie mit der Betreuung durch uns?
-                    </td>
-
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="b_r0" value="0" />
-                    </td>
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="b_r0" value="1" />
-                    </td>
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="b_r0" value="2" />
-                    </td>
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="b_r0" value="3" />
-                    </td>
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="b_r0" value="4" />
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-        <!--xxxx remove 2 x <br>-->
-        <label class="labelTextfeld">Was Sie uns noch mitteilen möchten</label>
-        <textarea id="b_t0" rows="5" cols="100"></textarea>
-    </fieldset>
-
-    <!--xxxx remove 2x <br>-->
-    <fieldset class="fieldsetBox">
-        <!--h2 zu p um Größe anpassen zu können-->
-        <p class="headerErsteEbene">3.Bewertung der Referenten bzw. Referentinnen</p>
-        <p>Welche Bewertungen bzw. Bemerkungen möchten Sie zu den eingesetzen Referenten bzw Referentinnen abgeben?</p>
-        <!--xxxx remove 4 x <br>-->
-        <label class="labelTextfeld">Bemerkungen</label>
-        <textarea id="c_t0" rows="5" cols="100"></textarea>
-    </fieldset>
-
-    <br>
-    <br>
-    <fieldset class="fieldsetBox" id="referent">
-        <!--h2 zu p um Größe anpassen zu können-->
-        <p class="headerErsteEbene">Bewertung der Referentin / des Referenten </p>
-        <!--xxxx remove 1x <br>-->
-
-        <table>
-            <thead class="headerErsteEbene">
-                <th class="thKategorie " id="name">Name: Max Müller</th>
-                <th class="thWertung">-2</th>
-                <th class="thWertung">-1</th>
-                <th class="thWertung">0</th>
-                <th class="thWertung">1</th>
-                <th class="thWertung">2</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        Wie war ihr / sein Unterricht vorbereitet?
-                    </td>
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="r0" value="0" />
-                    </td>
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="r0" value="1" />
-                    </td>
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="r0" value="2" />
-                    </td>
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="r0" value="3" />
-                    </td>
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="r0" value="4" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Wie umfangreich war ihr / sein Fachwissen?
-                    </td>
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="r1" value="0" />
-                    </td>
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="r1" value="1" />
-                    </td>
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="r1" value="2" />
-                    </td>
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="r1" value="3" />
-                    </td>
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="r1" value="4" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Wie ging sie / er auf spezielle thematische Probleme ein?
-                    </td>
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="r2" value="0" />
-                    </td>
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="r2" value="1" />
-                    </td>
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="r2" value="2" />
-                    </td>
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="r2" value="3" />
-                    </td>
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="r2" value="4" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Wie verständlich sie / er die Inhalte vermitteln?
-                    </td>
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="r3" value="0" />
-                    </td>
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="r3" value="1" />
-                    </td>
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="r3" value="2" />
-                    </td>
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="r3" value="3" />
-                    </td>
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="r3" value="4" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Wie sagte Ihnen ihr / sein Verhalten gegenüber den Seminarteilnehmern zu?
-                    </td>
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="r4" value="0" />
-                    </td>
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="r4" value="1" />
-                    </td>
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="r4" value="2" />
-                    </td>
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="r4" value="3" />
-                    </td>
-                    <td>
-                        <input type="radio" class="form-radio validate[required]" name="r4" value="4" />
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <label class="labelTextfeld">Bemerkungen</label>
-        <textarea name="t1" rows="5" cols="100"></textarea>
-
-    </fieldset>
-
-    <button id="OKButton" onclick="okButtonGedrueckt()">Fertig</button>
-
+    <script src="../../js/aes.js"></script>
+    <script src="../../js/obscurated.js"></script>
     <script src="../../js/javascript.js"></script>
-
-
-
 </body>
-
 </html>
