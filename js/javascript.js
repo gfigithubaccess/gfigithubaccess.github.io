@@ -59,7 +59,7 @@ function leseBewertungen() {
 
     let kodierteBewertungen = ""; // Kodiert in unserem Format mit Separatoren | | | |      
 
-    kodierteBewertungen += getVerifyID().toString();
+    kodierteBewertungen += getVerifyID().toString() + "|";
 
     console.log("Body: = " + document.body);
 
