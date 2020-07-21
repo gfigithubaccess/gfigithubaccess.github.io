@@ -59,6 +59,7 @@ function leseBewertungen() {
 
     let kodierteBewertungen = ""; // Kodiert in unserem Format mit Separatoren | | | |      
 
+    kodierteBewertungen += getVerifyID().toString();
 
     console.log("Body: = " + document.body);
 
@@ -236,6 +237,10 @@ function getRadiobuttonValue(radioButtonGroupName) {
 // Holt den Wert des Textfeldes mit der jeweiligen ID
 function getTextFieldValue(textFieldId) {
     return document.getElementById(textFieldId).value;
+}
+
+function getVerifyID() {
+    return document.getElementsByTagName("body").getAttribute("verifyID");
 }
 
 
