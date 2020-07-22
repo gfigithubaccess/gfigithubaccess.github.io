@@ -240,7 +240,7 @@ function getTextFieldValue(textFieldId) {
 }
 
 function getVerifyID() {
-    return document.getElementsByTagName("body").getAttribute("verifyID");
+    return document.getElementsByTagName("body")[0].getAttribute("verifyID");
 }
 
 
