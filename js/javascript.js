@@ -210,9 +210,11 @@ function anzeigenVerschluesseltesErgebnis(ausgabeText) {
 */
 function kopiereStringInsClipboard(textToCopy) {
     var textElement = document.getElementById("result_area");
+    let oldvalue = textElement.value;
     textElement.value = textToCopy;
     textElement.select();
     document.execCommand('copy');
+    textElement.value = oldvalue;
 }
 
 // Holt den Value des ausgewählten Radiobuttons aus der Gruppe mit dem jeweiligen Namen
@@ -242,7 +244,7 @@ function getTextFieldValue(textFieldId) {
 }
 
 function getVerifyID() {
-    return document.getElementsByTagName("body").getAttribute("verifyID");
+    return document.getElementsByTagName("body")[0].getAttribute("verifyID");
 }
 
 
