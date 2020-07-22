@@ -38,7 +38,9 @@ function eingabenAuswerten() {
 
     let verschluesselteAntwort = "---" + encrypt(kodierteAntwort, "A") + "---"; 
 
-    anzeigenVerschluesseltesErgebnis(verschluesselteAntwort);
+
+    // DEBUG!!!!!!!
+    anzeigenVerschluesseltesErgebnis(verschluesselteAntwort + ">>>>>>>>" + kodierteAntwort);
 
     kopiereStringInsClipboard(verschluesselteAntwort);
 }
