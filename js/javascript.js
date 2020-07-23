@@ -1,6 +1,6 @@
 
 let alleRadioButtonsAusgewaehlt;
-let randomID;
+let fragebogenID;
 
 /* Wird beim Drücken des Buttons aufgerufen.
 */
@@ -64,8 +64,8 @@ function leseBewertungen() {
 
     kodierteBewertungen += getVerifyID().toString() + "|";
 
-    kodierteBewertungen += getRandomID().toString() + "|";
-    console.log("Momentane randomID --> "+getRandomID);
+    kodierteBewertungen += getFragebogenID().toString() + "|";
+    console.log("Momentane randomID --> "+getFragebogenID);
 
     console.log("Body: = " + document.body);
 
@@ -251,13 +251,13 @@ function getVerifyID() {
     return document.getElementsByTagName("body")[0].getAttribute("verifyID");
 }
 
-function getRandomID() {
+function getFragebogenID() {
 
-    if (randomID == undefined)
+    if (fragebogenID == undefined)
     {
-        randomID = Math.floor((Math.random() * (Math.pow(2,31)-2)) + 1);
+        fragebogenID = Math.floor((Math.random() * (Math.pow(2,31)-2)) + 1);
     }
-    return randomID;
+    return fragebogenID;
     
 }
 
