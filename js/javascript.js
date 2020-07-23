@@ -1,6 +1,6 @@
 
 let alleRadioButtonsAusgewaehlt;
-let fragebogenID;
+let antwortID;
 
 /* Wird beim Drücken des Buttons aufgerufen.
 */
@@ -62,10 +62,10 @@ function leseBewertungen() {
 
     let kodierteBewertungen = ""; // Kodiert in unserem Format mit Separatoren | | | |      
 
-    kodierteBewertungen += getVerifyID().toString() + "|";
+    kodierteBewertungen += getUmfrageID().toString() + "|";
 
-    kodierteBewertungen += getFragebogenID().toString() + "|";
-    console.log("Momentane randomID --> "+getFragebogenID);
+    kodierteBewertungen += getAntwortID().toString() + "|";
+    console.log("Momentane randomID --> "+getAntwortID);
 
     console.log("Body: = " + document.body);
 
@@ -247,17 +247,17 @@ function getTextFieldValue(textFieldId) {
     return document.getElementById(textFieldId).value;
 }
 
-function getVerifyID() {
-    return document.getElementsByTagName("body")[0].getAttribute("verifyID");
+function getUmfrageID() {
+    return document.getElementsByTagName("body")[0].getAttribute("umfrageID");
 }
 
-function getFragebogenID() {
+function getAntwortID() {
 
-    if (fragebogenID == undefined)
+    if (antwortID == undefined)
     {
-        fragebogenID = Math.floor((Math.random() * (Math.pow(2,31)-2)) + 1);
+        antwortID = Math.floor((Math.random() * (Math.pow(2,31)-2)) + 1);
     }
-    return fragebogenID;
+    return antwortID;
     
 }
 
