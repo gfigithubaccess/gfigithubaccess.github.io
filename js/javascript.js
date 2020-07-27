@@ -253,8 +253,7 @@ function getUmfrageID() {
 
 function getAntwortID() {
 
-    if (antwortID == undefined)
-    {
+    if (antwortID === undefined) {
         antwortID = Math.floor((Math.random() * (Math.pow(2,31)-2)) + 1);
     }
     return antwortID;
