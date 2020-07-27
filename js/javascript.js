@@ -1,6 +1,7 @@
 
 let alleRadioButtonsAusgewaehlt;
 let antwortID;
+let topmostUnclickedRadiobuttonGroupName;
 
 /* Wird beim Drücken des Buttons aufgerufen.
 */
@@ -30,10 +31,13 @@ function eingabenAuswerten() {
     let kodierteAntwort;
 
     alleRadioButtonsAusgewaehlt = true; // Wir gehen davon, dass alles angeklickt wurde
+    topmostUnclickedRadiobuttonGroupName = null; // Kein Radiobutton ist derzeit der oberste nicht geklickte
+
 
     kodierteAntwort = leseBewertungen(); // Hier kann ein error geworfen werden
 
     if (alleRadioButtonsAusgewaehlt === false) { // Mindestens ein Radio-Button wurde nicht ausgewählt.
+        scrollToTopmostIncompleteFieldset();
         return;
     }
 
@@ -237,6 +241,7 @@ function getRadiobuttonValue(radioButtonGroupName) {
     document.getElementById(radioButtonGroupName + "_warnung").style.display = "block";
 
     alleRadioButtonsAusgewaehlt = false;
+    topmostUnclickedRadiobuttonGroupName = radioButtonGroupName;
 
     return "";
 
@@ -258,6 +263,20 @@ function getAntwortID() {
     }
     return antwortID;
     
+}
+
+function getTopNextFieldSet(radioButtonGroupName) {
+    let initialRB = document.getElementsByName(radioButtonGroupName)[0];
+    let theElement = initialRB;
+    while(true) {
+        if (theElement.tagName === "fieldset") return theElement;
+        theElement = theElement.parentNode;
+    }
+}
+
+function scrollToTopmostIncompleteFieldset() {
+    let theFieldset = getTopNextFieldSet(topmostUnclickedRadiobuttonGroupName);
+    theFieldset.scrollIntoView(true); // SWIW: true legt obere Kante an obere Kante
 }
 
 
