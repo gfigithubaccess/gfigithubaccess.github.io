@@ -276,7 +276,7 @@ function getTopNextFieldSet(radioButtonGroupName) {
 
 function scrollToTopmostIncompleteFieldset() {
     let theFieldset = getTopNextFieldSet(topmostUnclickedRadiobuttonGroupName);
-    theFieldset.scrollIntoView(true); // SWIW: true legt obere Kante an obere Kante
+    theFieldset.scrollIntoView();
 }
 
 
