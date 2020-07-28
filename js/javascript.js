@@ -1,6 +1,7 @@
 
 let alleRadioButtonsAusgewaehlt;
 let antwortID;
+let topmostUnclickedRadiobuttonGroupName;
 
 /* Wird beim Drücken des Buttons aufgerufen.
 */
@@ -30,10 +31,13 @@ function eingabenAuswerten() {
     let kodierteAntwort;
 
     alleRadioButtonsAusgewaehlt = true; // Wir gehen davon, dass alles angeklickt wurde
+    topmostUnclickedRadiobuttonGroupName = null; // Kein Radiobutton ist derzeit der oberste nicht geklickte
+
 
     kodierteAntwort = leseBewertungen(); // Hier kann ein error geworfen werden
 
     if (alleRadioButtonsAusgewaehlt === false) { // Mindestens ein Radio-Button wurde nicht ausgewählt.
+        scrollToTopmostIncompleteFieldset();
         return;
     }
 
@@ -237,6 +241,7 @@ function getRadiobuttonValue(radioButtonGroupName) {
     document.getElementById(radioButtonGroupName + "_warnung").style.display = "block";
 
     alleRadioButtonsAusgewaehlt = false;
+    if (topmostUnclickedRadiobuttonGroupName === null) topmostUnclickedRadiobuttonGroupName = radioButtonGroupName;
 
     return "";
 
@@ -253,12 +258,26 @@ function getUmfrageID() {
 
 function getAntwortID() {
 
-    if (antwortID == undefined)
-    {
+    if (antwortID === undefined) {
         antwortID = Math.floor((Math.random() * (Math.pow(2,31)-2)) + 1);
     }
     return antwortID;
     
+}
+
+function getTopNextFieldSet(radioButtonGroupName) {
+    let initialRB = document.getElementsByName(radioButtonGroupName)[0];
+    let theElement = initialRB;
+    while(true) {
+        console.log(theElement);
+        if (theElement.tagName === "FIELDSET") return theElement;
+        theElement = theElement.parentNode;
+    }
+}
+
+function scrollToTopmostIncompleteFieldset() {
+    let theFieldset = getTopNextFieldSet(topmostUnclickedRadiobuttonGroupName);
+    theFieldset.scrollIntoView();
 }
 
 
