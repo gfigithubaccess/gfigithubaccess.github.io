@@ -241,7 +241,7 @@ function getRadiobuttonValue(radioButtonGroupName) {
     document.getElementById(radioButtonGroupName + "_warnung").style.display = "block";
 
     alleRadioButtonsAusgewaehlt = false;
-    topmostUnclickedRadiobuttonGroupName = radioButtonGroupName;
+    if (topmostUnclickedRadiobuttonGroupName === null) topmostUnclickedRadiobuttonGroupName = radioButtonGroupName;
 
     return "";
 
@@ -269,7 +269,8 @@ function getTopNextFieldSet(radioButtonGroupName) {
     let initialRB = document.getElementsByName(radioButtonGroupName)[0];
     let theElement = initialRB;
     while(true) {
-        if (theElement.tagName === "fieldset") return theElement;
+        console.log(theElement);
+        if (theElement.tagName === "FIELDSET") return theElement;
         theElement = theElement.parentNode;
     }
 }
