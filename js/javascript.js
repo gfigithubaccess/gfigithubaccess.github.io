@@ -221,6 +221,7 @@ function kopiereStringInsClipboard(textToCopy) {
     textElement.select();
     document.execCommand('copy');
     textElement.value = oldvalue;
+	document.getElementById("result_area").style.display = "block";
 }
 
 // Holt den Value des ausgewählten Radiobuttons aus der Gruppe mit dem jeweiligen Namen
