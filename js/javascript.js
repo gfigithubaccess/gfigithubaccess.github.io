@@ -41,7 +41,7 @@ function eingabenAuswerten() {
         return;
     }
 
-    let verschluesselteAntwort = "---" + encrypt(kodierteAntwort, "A") + "---"; 
+    let verschluesselteAntwort = "*Ergebnis des Fragebogens:* " + "---" + encrypt(kodierteAntwort, "A") + "---"; 
 
     anzeigenVerschluesseltesErgebnis(verschluesselteAntwort);
 
@@ -207,7 +207,7 @@ function anzeigenVerschluesseltesErgebnis(ausgabeText) {
 
     document.getElementById("question_div").style.display = "none";  // verstecke das Frage-Area
 
-    document.getElementById("result_area").value = "*Ergebnis des Fragebogens:* "+ausgabeText;       // Zeige den Antworttext im Antwort-Area an
+    document.getElementById("result_area").value = ausgabeText;       // Zeige den Antworttext im Antwort-Area an
     document.getElementById("result_div").style.display = "block";   // Zeige das Antwort-Area an
 }
 
