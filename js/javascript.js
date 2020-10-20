@@ -41,7 +41,7 @@ function eingabenAuswerten() {
         return;
     }
 
-    let verschluesselteAntwort = "*Ergebnis des Fragebogens:* " + "---" + encrypt(kodierteAntwort, "A") + "---"; 
+    let verschluesselteAntwort = "Ergebnis des Fragebogens: " + "---" + encrypt(kodierteAntwort, "A") + "---"; 
 
     anzeigenVerschluesseltesErgebnis(verschluesselteAntwort);
 
