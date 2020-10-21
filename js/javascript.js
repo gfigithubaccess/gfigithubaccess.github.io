@@ -40,13 +40,25 @@ function eingabenAuswerten() {
         scrollToTopmostIncompleteFieldset();
         return;
     }
-    console.log(kodierteAntwort)
-    console.log(kodierteAntwort.length)
+    
     let verschluesselteAntwort = "Ergebnis des Fragebogens: " + "---" + encrypt(kodierteAntwort, "A") + "---"; 
 
     anzeigenVerschluesseltesErgebnis(verschluesselteAntwort);
 
     kopiereStringInsClipboard(verschluesselteAntwort);
+}
+
+function paddingHinzufuegen(input) {
+    if (input.length > 1200) {
+        return input;
+    }
+    else {
+        input = "|" + input;
+        while(input.length < 1200){
+            input = "0000000000" + input;
+        }
+        return input;
+    }
 }
 /*
 
