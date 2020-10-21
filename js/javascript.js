@@ -40,7 +40,8 @@ function eingabenAuswerten() {
         scrollToTopmostIncompleteFieldset();
         return;
     }
-
+    console.log(kodierteAntwort)
+    console.log(kodierteAntwort.length)
     let verschluesselteAntwort = "Ergebnis des Fragebogens: " + "---" + encrypt(kodierteAntwort, "A") + "---"; 
 
     anzeigenVerschluesseltesErgebnis(verschluesselteAntwort);
