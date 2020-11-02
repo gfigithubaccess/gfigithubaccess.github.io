@@ -93,6 +93,12 @@ function leseBewertungen() {
         return null;
     }
 
+    let filler = "miau"
+
+    for(let i=kodierteBewertungen.length; i<1000; i+=filler.length) {
+        kodierteBewertungen = kodierteBewertungen + filler;
+    }
+
     return kodierteBewertungen;
 
 }
