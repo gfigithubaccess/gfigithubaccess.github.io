@@ -93,8 +93,8 @@ function leseBewertungen() {
         return null;
     }
 
+    // Füllen des Antwortstrings auf mindestens 1000 Zeichen
     let filler = "miau"
-
     for(let i=kodierteBewertungen.length; i<1000; i+=filler.length) {
         kodierteBewertungen = kodierteBewertungen + filler;
     }
