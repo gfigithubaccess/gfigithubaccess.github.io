@@ -93,7 +93,12 @@ function leseBewertungen() {
         return null;
     }
 
-    // Füllen des Antwortstrings auf mindestens 1000 Zeichen
+    // Füllen des Antwortstrings auf mindestens 1000 Zeichen:
+    // Da diese Stopfzeichen keinen Element-Terminator enthalten,
+    // und die Java-Klasse AzubiAntwort überflüssige Elemente am Ende ignoriert,
+    // solange sie nicht so viele sind, um einen Referenten einzulesen, ist es egal,
+    // ob hinten dran noch Text ist. Der Stopftext dient dazu, die Anonymität zu wahren,
+    // indem eine Längenanalyse der verschlüsselten Antwortstrings erschwert wird.
     let filler = "miau"
     for(let i=kodierteBewertungen.length; i<1000; i+=filler.length) {
         kodierteBewertungen = kodierteBewertungen + filler;
