@@ -219,7 +219,14 @@ function anzeigenVerschluesseltesErgebnis(ausgabeText) {
     document.getElementById("question_div").style.display = "none";  // verstecke das Frage-Area
 
     document.getElementById("result_area").value = ausgabeText;       // Zeige den Antworttext im Antwort-Area an
-    document.getElementById("result_div").style.display = "block";   // Zeige das Antwort-Area an
+    if(document.getElementsByClassName("labelTextarea").length<=950) {
+        
+        document.getElementById("result_div").style.display = "block";   // Zeige das Antwort-Area an
+
+    }
+
+    document.getElementById("result_div_with_warning").style.display = "block";   // Zeige das Antwort-Area mit Warnung an
+
 }
 
 /** Kopiert den param textToCopy in die Zwischenablage.
