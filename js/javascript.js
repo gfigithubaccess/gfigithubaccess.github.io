@@ -100,7 +100,7 @@ function leseBewertungen() {
     // ob hinten dran noch Text ist. Der Stopftext dient dazu, die Anonymität zu wahren,
     // indem eine Längenanalyse der verschlüsselten Antwortstrings erschwert wird.
     let filler = "miau"
-    for(let i=kodierteBewertungen.length; i<1000; i+=filler.length) {
+    for(let i=kodierteBewertungen.length; i<200; i+=filler.length) {
         kodierteBewertungen = kodierteBewertungen + filler;
     }
 
