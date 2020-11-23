@@ -100,7 +100,7 @@ function leseBewertungen() {
     // ob hinten dran noch Text ist. Der Stopftext dient dazu, die Anonymität zu wahren,
     // indem eine Längenanalyse der verschlüsselten Antwortstrings erschwert wird.
     let filler = "miau"
-    for(let i=kodierteBewertungen.length; i<1000; i+=filler.length) {
+    for(let i=kodierteBewertungen.length; i<200; i+=filler.length) {
         kodierteBewertungen = kodierteBewertungen + filler;
     }
 
@@ -218,8 +218,17 @@ function anzeigenVerschluesseltesErgebnis(ausgabeText) {
 
     document.getElementById("question_div").style.display = "none";  // verstecke das Frage-Area
 
+   
+    if(leseBewertungen().length<=950) {
+        
+        document.getElementById("result_div").style.display = "block";   // Zeige das Antwort-Area an
+
+    } else {
+
+    document.getElementById("result_div_with_warning").style.display = "block";   // Zeige das Antwort-Area mit Warnung an
+
+    }
     document.getElementById("result_area").value = ausgabeText;       // Zeige den Antworttext im Antwort-Area an
-    document.getElementById("result_div").style.display = "block";   // Zeige das Antwort-Area an
 }
 
 /** Kopiert den param textToCopy in die Zwischenablage.
@@ -232,7 +241,7 @@ function kopiereStringInsClipboard(textToCopy) {
     textElement.select();
     document.execCommand('copy');
     textElement.value = oldvalue;
-	document.getElementById("result_area").style.display = "none";
+	//document.getElementById("result_area").style.display = "none";
 }
 
 // Holt den Value des ausgewählten Radiobuttons aus der Gruppe mit dem jeweiligen Namen
