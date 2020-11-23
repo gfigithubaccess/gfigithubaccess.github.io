@@ -223,10 +223,11 @@ function anzeigenVerschluesseltesErgebnis(ausgabeText) {
         
         document.getElementById("result_div").style.display = "block";   // Zeige das Antwort-Area an
 
-    }
+    } else {
 
     document.getElementById("result_div_with_warning").style.display = "block";   // Zeige das Antwort-Area mit Warnung an
 
+    }
 }
 
 /** Kopiert den param textToCopy in die Zwischenablage.
