@@ -218,6 +218,7 @@ function anzeigenVerschluesseltesErgebnis(ausgabeText) {
 
     document.getElementById("question_div").style.display = "none";  // verstecke das Frage-Area
 
+    document.getElementById("result_area").value = ausgabeText;       // Zeige den Antworttext im Antwort-Area an
    
     if(leseBewertungen().length<=950) {
         
@@ -228,7 +229,7 @@ function anzeigenVerschluesseltesErgebnis(ausgabeText) {
     document.getElementById("result_div_with_warning").style.display = "block";   // Zeige das Antwort-Area mit Warnung an
 
     }
-    document.getElementById("result_area").value = ausgabeText;       // Zeige den Antworttext im Antwort-Area an
+   
 }
 
 /** Kopiert den param textToCopy in die Zwischenablage.
@@ -241,7 +242,7 @@ function kopiereStringInsClipboard(textToCopy) {
     textElement.select();
     document.execCommand('copy');
     textElement.value = oldvalue;
-	//document.getElementById("result_area").style.display = "none";
+	document.getElementById("result_area").style.display = "none";
 }
 
 // Holt den Value des ausgewählten Radiobuttons aus der Gruppe mit dem jeweiligen Namen
