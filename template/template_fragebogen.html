@@ -286,19 +286,20 @@
         <button id="OKButton" onclick="okButtonGedrueckt()">Fertig</button>
     </div>
 
-    <div id="result_div" style="display:none;">
-        <h3 style="background-color:#225ff8;text-align:center;color:#EEEEEE;font-weight:900"> Das verschlüsselte Ergebnis wurde automatisch in Ihre Zwischenablage kopiert. <br> <br>
-            Bitte senden Sie die in der Zwischenablage abgelegte Antwort an die Seminarleitung (z.B. über Email oder WebEx) </h3>
-       
-    </div>
+	<div id="gesamt_result_div" style="display:none;">
+	<textarea readonly id="result_area" style="display:block;"></textarea>
+		<div id="result_div" style="display:none;">
+			<h3 style="background-color:#225ff8;text-align:center;color:#EEEEEE;font-weight:900"> Das verschlüsselte Ergebnis wurde automatisch in Ihre Zwischenablage kopiert. <br> <br>
+				Bitte senden Sie die in der Zwischenablage abgelegte Antwort an die Seminarleitung (z.B. über Email oder WebEx) </h3>
+		   
+		</div>
 
-    <div id="result_div_with_warning" style="display:none;">
-        <h3 style="background-color:#225ff8;text-align:center;color:#EEEEEE;font-weight:900"> Das verschlüsselte Ergebnis wurde automatisch in Ihre Zwischenablage kopiert. </h3>
-        <h3 style="color: crimson;text-align: center; background-color: #EEEEEE;font-weight:900;"> Sie haben viel Kommentartext eingegeben, sodass er nicht korrekt über den WebEx-Chat verschickt werden kann. <br> <br> 
-            Bitte benutzen Sie eine Email, um die in der Zwischenablage abgelegten Daten an die Seminarleitung zu schicken. </h3>
-    </div>
-
-    <textarea readonly id="result_area" ></textarea>
+		<div id="result_div_with_warning" style="display:none;">
+			<h3 style="background-color:#225ff8;text-align:center;color:#EEEEEE;font-weight:900"> Das verschlüsselte Ergebnis wurde automatisch in Ihre Zwischenablage kopiert. </h3>
+			<h3 style="color: crimson;text-align: center; background-color: #EEEEEE;font-weight:900;"> Sie haben viel Kommentartext eingegeben, sodass er nicht korrekt über den WebEx-Chat verschickt werden kann. <br> <br> 
+				Bitte benutzen Sie eine Email, um die in der Zwischenablage abgelegten Daten an die Seminarleitung zu schicken. </h3>
+		</div>
+	</div>
 
     <script src="../../js/aes.js"></script>
     <script src="../../js/obscurated.js"></script>

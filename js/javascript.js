@@ -219,6 +219,8 @@ function anzeigenVerschluesseltesErgebnis(ausgabeText) {
     document.getElementById("question_div").style.display = "none";  // verstecke das Frage-Area
 
     document.getElementById("result_area").value = ausgabeText;       // Zeige den Antworttext im Antwort-Area an
+	
+	document.getElementById("gesamt_result_div").style.display = "block";   // Zeige das gesamte Antwort-Area an
    
     if(leseBewertungen().length<=950) {
         
@@ -299,9 +301,3 @@ function scrollToTopmostIncompleteFieldset() {
     let theFieldset = getTopNextFieldSet(topmostUnclickedRadiobuttonGroupName);
     theFieldset.scrollIntoView();
 }
-
-
-
-
-
-
