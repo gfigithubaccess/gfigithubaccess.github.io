@@ -50,7 +50,7 @@ input {
 input[type=radio] {
     position: relative;
     appearance: none;
-    font-size: 120%;
+    font-size: 112%;
     width: 1em;
     color: black;
     outline: none; 
